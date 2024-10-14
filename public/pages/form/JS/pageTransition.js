@@ -1,7 +1,8 @@
-
 let currentPage = 0;
 let title = document.querySelector('.form_details h2');
 let submitBtn = document.querySelector('.submit');
+let inputBox = document.querySelectorAll('.dropbox_section input')
+let Images = []
 
 const multiPage = [
     'business-details',
@@ -17,6 +18,14 @@ const tagLines = [
     'Give some Testimonials',
     'Want more leads?'
 ];
+const fields = [
+    ['Name_of_Business', 'Tagline'],
+    ['product', 'city', 'establishedYear', 'additonalProduct'],
+    ['betterQuality', 'customerSupport', 'experience'],
+    ['Name1', 'testimonial1', 'Name2', 'testimonial2', 'Name3', 'testimonial3'],
+    ['businessEmail', 'phone', 'address', 'calendyLink']
+]
+
 
 const switchMultiPage = (currentPage) => {
     title.innerHTML = `${tagLines[currentPage]}`;
@@ -28,23 +37,71 @@ const switchMultiPage = (currentPage) => {
 }
 switchMultiPage(currentPage)
 
+
+
+
+// Next Page
 document.querySelector('.next_btn').addEventListener('click', () => {
     if (currentPage < multiPage.length) {
-
         document.querySelector('.next_btn').style.display = 'flex'
 
-        currentPage += 1; switchMultiPage(currentPage);
-
-        currentPage == multiPage.length - 1 ? submitBtn.style.display = 'block' : submitBtn.style.display = 'none';
-        if (currentPage == multiPage.length - 1) {
-            document.querySelector('.next_btn').style.display = 'none'
+        if (checkFields(currentPage)) {
+            currentPage += 1; switchMultiPage(currentPage);
+            currentPage == multiPage.length - 1 ? submitBtn.style.display = 'block' : submitBtn.style.display = 'none';
+            if (currentPage == multiPage.length - 1) {
+                document.querySelector('.next_btn').style.display = 'none'
+            }
         }
     }
 })
+// Previous Page
 document.querySelector('.prev_btn').addEventListener('click', () => {
     if (currentPage > 0) {
         document.querySelector('.next_btn').style.display = 'flex'
         currentPage -= 1; switchMultiPage(currentPage);
         currentPage == multiPage.length - 1 ? submitBtn.style.display = 'block' : submitBtn.style.display = 'none';
     }
+})
+
+
+// Checking each fields
+const checkFields = (currentPage) => {
+    let check = true;
+    fields[currentPage].forEach(item => {
+        let x = document.querySelector(`#${item}`);
+        if (x.value == '') {
+            x.parentElement.nextElementSibling.innerHTML = `${item.charAt(0).toUpperCase()}${item.slice(1)} is required`
+            check = false;
+        }
+        else {
+            x.parentElement.nextElementSibling.innerHTML = ``
+        }
+    })
+    return check;
+}
+
+
+
+const uploadImage = async (e) => {
+    let image = e.target.files[0];
+    let canvas = e.target.previousElementSibling;
+    let labelcanvas = e.target.parentElement;
+    canvas.style.opacity = "0";
+    let imageUrl = URL.createObjectURL(image)
+    labelcanvas.style.backgroundImage = `url(${imageUrl})`;
+    labelcanvas.style.border = "2px solid black";
+
+    Images.push(
+        {
+            'from': e.target.id,
+            'value': 1
+        }
+    )
+
+    console.log(Images);
+
+}
+
+inputBox.forEach(item => {
+    item.addEventListener('change', uploadImage)
 })

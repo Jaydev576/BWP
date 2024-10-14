@@ -118,7 +118,7 @@
                                             <p>or</p>
                                             <span class="browse-button">Browse file</span>
                                         </div>
-                                        <input type="file" id="logo" name="logo" onChange={uploadImage} />
+                                        <input type="file" id="logo" name="logo" />
                                     </label>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                             <p>or</p>
                                             <span class="browse-button">Browse file</span>
                                         </div>
-                                        <input type="file" id="mainImage" name="mainImage" onChange={uploadImage} />
+                                        <input type="file" id="mainImage" name="mainImage" />
                                     </label>
                                 </div>
                             </div>
@@ -142,12 +142,14 @@
                                         required="true" />
                                     <span>Name of Business</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
                                     <input type="text" class="input" required="true" id='Tagline' name="Tagline" />
                                     <span> Tag line of your business</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                         </div>
                         <!-- {/* ---------------Business_Details--------------- */} -->
@@ -158,12 +160,14 @@
                                     <input type="text" class="input" required='true' id="product" name="product" />
                                     <span>Your Product or Service</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
                                     <input type="text" class="input" required='true' id="city" name="city" />
                                     <span>City of business</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -171,6 +175,7 @@
                                         name="establishedYear" />
                                     <span>Established year of your business</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -178,6 +183,7 @@
                                         name="additonalProduct" />
                                     <span>Your Additional Product or Service</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                         </div>
                         <!-- {/* ---------------------About Us-------------------------- */} -->
@@ -190,6 +196,7 @@
                                             name="betterQuality"></textarea>
                                         <span>Tell us how your service or product is better than others</span>
                                     </div>
+                                    <p class="errortext"></p>
                                 </div>
                                 <div class="dropbox_section">
                                     <div class="file-upload-form">
@@ -212,6 +219,7 @@
                                         <span>Tell us how your team satisfy customers with your customer
                                             support</span>
                                     </div>
+                                    <p class="errortext"></p>
                                 </div>
                                 <div class="dropbox_section">
                                     <div class="file-upload-form">
@@ -233,6 +241,7 @@
                                             name="experience"></textarea>
                                         <span>Tell us your experience with-in your work industry </span>
                                     </div>
+                                    <p class="errortext"></p>
                                 </div>
                                 <div class="dropbox_section">
                                     <div class="file-upload-form">
@@ -257,6 +266,7 @@
                                     <input type="text" class="input" required={true} id="Name1" name="Name1" />
                                     <span>Name 1</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -264,6 +274,7 @@
                                         name="testimonial1"></textarea>
                                     <span>Testimonial 1</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
 
                             <!--  Second  -->
@@ -272,6 +283,7 @@
                                     <input type="text" class="input" required={true} id="Name2" name="Name2" />
                                     <span>Name 2</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -279,6 +291,7 @@
                                         name="testimonial2"></textarea>
                                     <span>Testimonial 2</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
 
                             <!-- Third  -->
@@ -287,6 +300,7 @@
                                     <input type="text" class="input" required={true} id="Name3" name="Name3" />
                                     <span>Name 3</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -294,6 +308,7 @@
                                         name="testimonial3"></textarea>
                                     <span>Testimonial 3</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                         </div>
                         <!-- ---------------Testimonial---------------  -->
@@ -305,18 +320,21 @@
                                         name="businessEmail" />
                                     <span>Email</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
                                     <input type="text" class="input" required={true} id="phone" name="phone" />
                                     <span>Phone</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
                                     <textarea class="input" required={true} id="address" name="address"></textarea>
                                     <span>Address</span>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -330,6 +348,7 @@
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
+                                <p class="errortext"></p>
                             </div>
                             <div class="textField">
                                 <div class="formField">
@@ -390,7 +409,6 @@
     </div>
 
     <script src="/pages/form/JS/pageTransition.js"></script>
-    <script src="/pages/form/JS/uploadImage.js"></script>
 </body>
 
 </html>

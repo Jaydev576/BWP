@@ -16,7 +16,6 @@ header {
     width: 100vw;
     height: 15vh;
     z-index: 10;
-    top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;

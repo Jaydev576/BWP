@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 app.use(express.static(path.join(__dirname, 'public')))
-const port = 2157
+const port = 3000
 
 
 app.get('/', (req, res) => {
@@ -16,6 +16,9 @@ app.get('/login', (req, res) => {
 })
 app.get('/form', (req, res) => {
     res.sendFile(__dirname + '/public/pages/form/index.html',)
+})
+app.get('/nav', (req, res) => {
+    res.sendFile(__dirname + '/public/pages/navbar/index.html',)
 })
 
 app.get('/theme/theme1', (req, res) => {
