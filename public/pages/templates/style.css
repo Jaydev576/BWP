@@ -1,0 +1,66 @@
+.hero-t-section {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 80px;
+}
+
+.hero-t-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    margin: 1rem;
+    font-size: 5vh;
+    color: #000;
+    word-spacing: 1.2vw;
+    font-weight: 600;
+    letter-spacing: 0.4vw;
+}
+
+.main-t-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 20vw;
+    height: 25vh;
+    background-color: rgba(217, 217, 217);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    border: 1px solid black;
+    margin-top: 3rem;
+    margin-inline: 2rem;
+}
+
+.card:hover {
+    border: 2px solid black;
+    transform: scale(1.1);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}

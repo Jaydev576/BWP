@@ -1,0 +1,210 @@
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.Background-Image {
+    height: 100vh !important;
+}
+
+ul {
+    list-style: none;
+}
+
+.form_details>h2 {
+    position: relative;
+    margin-bottom: 2rem;
+    width: max-content;
+}
+
+h2::after {
+    content: "";
+    width: 110%;
+    border-radius: 100%;
+    height: 0.18rem;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: -0.3rem;
+    left: -0.3rem;
+}
+
+.main-container>img {
+    height: 82vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 18vh;
+    z-index: -1;
+}
+
+.container {
+    margin-top: 6.5rem;
+    background-image: linear-gradient(47deg, #fff 0%, #181718 140%);
+    width: 80vw;
+    height: 96vh;
+    border-radius: 3vw;
+    display: flex;
+    /* Center */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.left {
+    width: 30%;
+    height: 100%;
+    border-radius: 3vw 0 0 3vw;
+    border-right: 1px solid black;
+}
+
+.right {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    border-radius: 0 3vw 3vw 0;
+}
+
+.business_name {
+    margin: 2vw 0 0 2vw;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.wt_name {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.left_list {
+    margin: 4vw 0 0 3.5vw;
+}
+
+.list-circle {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.list-circle>div:first-child {
+    background-color: #fff;
+}
+
+.pipeline {
+    width: 0.5rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%);
+    z-index: -5;
+    margin-bottom: 1rem;
+}
+
+.pipeline>div {
+    width: 100%;
+    height: 0%;
+    background-color: black;
+}
+
+.list-circle>div:first-child {
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.left_list li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
+
+.left_list li>p:last-child {
+    font-weight: 650;
+}
+
+.form_details {
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    justify-content: start;
+    width: 90%;
+    height: 80%;
+    margin: 2rem auto;
+}
+
+.form-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.dropbox_section {
+    font-size: 1.3rem;
+    font-weight: 550;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.dropbox_section>p {
+    margin-right: 2rem;
+}
+
+.textField {
+    margin: 3vw 0 3vw 0.3vw;
+}
+
+.submit {
+    position: absolute;
+    right: 3vw;
+    bottom: 1.25rem;
+    padding: 10px;
+    display: none;
+}
+
+.submit {
+    border: 2px solid black;
+    border-radius: 1rem;
+    font-weight: 550;
+}
+
+.submit:hover {
+    background-color: #0c0c0c;
+    color: white;
+}
+
+.errortext {
+    margin-top: 0.5rem !important;
+}
+
+#calendyYtInfo {
+    font-size: 1.05rem;
+    font-weight: 660;
+    margin: 0.5rem 1rem;
+}
+
+iframe {
+    border-radius: 2rem;
+    margin-left: 4rem;
+}
+
+.features>div {
+    width: 90%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.features .dropbox_section {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}

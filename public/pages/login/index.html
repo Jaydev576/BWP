@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - WebTree</title>
+    <link rel="shortcut icon" href="/Assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/pages/login/style.css">
+    <link rel="stylesheet" href="/pages/CSS/mainstyle.css">
+    <link rel="stylesheet" href="/pages/CSS/navbar.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div>
+            <nav class="navbar">
+                <div class="nav-left">
+                    <button class="nav-btn button account-btn"><a href="#">Account</a></button>
+                    <button class="nav-btn button contact-btn"><a href="#">Contact</a></button>
+                </div>
+                <div class="logo">
+                    <a href="/">
+                        <img src="/Assets/Logo.png" alt="">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-btn button aboutUs-btn"><a href="#">About us</a></button>
+                    <button class="nav-btn button template-btn"><a href="/templates">Templates</a></button>
+                </div>
+            </nav>
+        </div>
+        <button class="nav-btn button login-btn">
+            <a href="/login">Log In</a>
+        </button>
+    </header>
+    <!-- Navbar -->
+
+    <!-- Bg-Image -->
+    <img src='/Assets/Home-page-Bg-Image.png' class="Background-Image">
+    <!-- Bg-Image -->
+
+    <!-- Body -->
+    <div class='login-container'>
+        <form class="form">
+            <div class="flex-column">
+                <label>Email </label>
+            </div>
+            <div class="inputForm">
+                <img src="/pages/login/Assets/email.svg" alt="">
+                <input type="text" class="logininput" placeholder="Enter your Email" />
+            </div>
+            <div class="flex-column">
+                <label>Password </label>
+            </div>
+            <div class="inputForm">
+                <img src="/pages/login/Assets/password.svg" alt="">
+                <input type="password" class="logininput" placeholder="Enter your Password" />
+                <img src="/pages/login/Assets/showpassword.svg" alt="" id="showpassword">
+            </div>
+
+            <span class="span forgotPassword">Forgot password?</span>
+            <input type='submit' value='Log In' class='button-submit' />
+            <div>
+                <p class="p extraLoginInfo">Don't have an account?</p>
+                <span class="span alternativeProcess">Sign Up</span>
+            </div>
+        </form>
+    </div>
+    <!-- Body -->
+    <script>
+        let showpasswordBtn = document.querySelector('#showpassword');
+        let forgotPassword = document.querySelector('.forgotPassword')
+        let extraLoginInfo = document.querySelector('.extraLoginInfo')
+        let alternativeProcessBtn = document.querySelector('.alternativeProcess')
+        let submitBtn = document.querySelector('.button-submit');
+
+        alternativeProcessBtn.addEventListener('click', () => {
+            console.log(alternativeProcessBtn.innerHTML);
+
+            if (alternativeProcessBtn.innerHTML == 'Sign Up') {
+                forgotPassword.style.display = 'none'
+                extraLoginInfo.innerHTML = 'Already have an account ? '
+                alternativeProcessBtn.innerHTML = 'Log In'
+                submitBtn.value = 'Sign Up'
+            }
+            else {
+                forgotPassword.style.display = 'block'
+                extraLoginInfo.innerHTML = 'Don\'t have an account ? '
+                alternativeProcessBtn.innerHTML = 'Sign Up'
+                submitBtn.value = 'Log In'
+            }
+        })
+
+
+        showpasswordBtn.addEventListener('click', () => {
+            let inputBox = showpasswordBtn.previousElementSibling;
+            if (inputBox.type == 'password')
+                inputBox.type = 'text'
+            else
+                inputBox.type = 'password'
+        })
+    </script>
+</body>
+
+</html>

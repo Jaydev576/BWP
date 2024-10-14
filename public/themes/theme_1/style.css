@@ -1,0 +1,710 @@
+@font-face {
+    font-family: 'mergeOne';
+    src: url(./merge-one-cufonfonts-webfont/MergeOne-Regular.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: 'mergeOne', sans-serif;
+}
+
+body {
+    background-color: #020107;
+}
+
+button {
+    background-color: #ff8a00;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1.5rem;
+    position: relative;
+    top: 7rem;
+}
+
+main {
+    width: 75vw;
+    margin: auto;
+}
+
+.navbarWrap {
+    position: sticky;
+    z-index: 10;
+    top: 10px;
+    margin: 1rem 0;
+}
+
+navbar {
+    background-color: #ece9f838;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logoNav {
+    display: none;
+    position: absolute;
+    left: 1rem;
+}
+
+.logoNav img {
+    width: 4rem;
+    height: 100%;
+}
+
+#toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    position: static;
+    top: 0;
+    right: 1rem;
+    z-index: 5;
+    cursor: pointer;
+}
+
+#toggle img {
+    width: 3rem;
+    border-radius: 5px;
+}
+
+navbar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+    border-radius: 2rem;
+}
+
+navbar li,
+navbar a {
+    list-style: none;
+    font-size: large;
+    text-decoration: none;
+    background-color: #ece9f800;
+}
+
+#navbarMenu {
+    display: flex;
+    align-items: center;
+}
+
+#navbarMenu img {
+    width: 5rem;
+    height: 5rem;
+}
+
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    background-color: #444;
+    border: 1px solid #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#dropdown-menu ul {
+    display: block;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#dropdown-menu ul li {
+    margin: 0;
+}
+
+#dropdown-menu ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#dropdown-menu ul li a:hover {
+    background-color: #555;
+}
+
+.nameAndTagline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+    background-color: #ece9f838;
+}
+
+.nameAndTagline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/02/18123747/Untitled-design-2022-02-18T123717.280.jpg");
+    background-size: 100%;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.nameAndTagline>h1 {
+    font-family: 'Manjari', sans-serif;
+}
+
+.blocks>h1 {
+    margin-left: 2rem;
+    display: inline-block;
+    border-bottom: 0.2rem solid #ece9f838;
+}
+
+.firstBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.firstBlockLeft {
+    width: 50%;
+    margin: 4rem 2rem;
+    max-height: 100%;
+}
+
+.firstBlockRight {
+    border-radius: 1rem;
+    width: 50%;
+    min-height: 15rem;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #ece9f838;
+}
+
+.firstBlockRight img {
+    width: 100%;
+    height: 100%;
+}
+
+.secondBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    column-gap: 3rem;
+}
+
+.secondBlockLeft {
+    border-radius: 1rem;
+    width: 50%;
+    min-height: 15rem;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #ece9f838;
+}
+
+.secondBlockLeft img {
+    width: 100%;
+    height: 100%;
+}
+
+.secondBlockRight {
+    width: 50%;
+    margin-left: 2rem;
+    margin: 1rem;
+}
+
+.secondBlockRight a {
+    text-decoration: none;
+}
+
+.thirdBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.thirdBlockLeft {
+    width: 50%;
+    margin: 4rem 2rem;
+}
+
+.thirdBlockRight {
+    border-radius: 1rem;
+    width: 50%;
+    min-height: 15rem;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #ece9f838;
+}
+
+.thirdBlockRight img {
+    width: 100%;
+    height: 100%;
+}
+
+.about>h1 {
+    border-bottom: 0.2rem solid #ece9f838;
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.about {
+    width: 100%;
+    margin-top: 2rem;
+    height: 24rem;
+}
+
+.aboutWrap {
+    display: flex;
+    height: 100%;
+    margin: 2rem 3rem;
+    column-gap: 0;
+}
+
+.aboutText {
+    width: 50%;
+    height: 100%;
+    margin: 2.5rem 2rem;
+    line-height: 1.4;
+}
+
+.aboutImage {
+    background-color: white;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfLoHyexJ-7EBeNet9F8Bni7Dp3UANIU8muw&s");
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    height: 60%;
+    width: 50%;
+}
+
+.aboutImage p {
+    color: black;
+}
+
+.companyText {
+    width: 90%;
+    margin: 0 1rem;
+}
+
+.companyText p {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.testimonials {
+    margin: 2rem 0;
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonialsBanner {
+    border: 0.3rem solid white;
+    border-bottom: none;
+    border-radius: 3rem;
+    height: 6rem;
+    width: 50%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    padding-top: 0.4rem;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #212122;
+}
+
+.testimonialsBanner p {
+    letter-spacing: 0.2rem;
+}
+
+.testimonialsContent {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    position: absolute;
+    top: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #212122;
+}
+
+.testimonialsCard {
+    width: 40%;
+    height: 60%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #020107;
+}
+
+.testimonialsCard p {
+    padding: 8px;
+}
+
+.testimonialsContent a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    width: 75vw;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2rem;
+    background-color: rgba(91, 90, 90, 0.951);
+}
+
+.logo,
+.details,
+.socialHandles {
+    width: 30%;
+    height: 20rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.details span p:last-child {
+    text-align: center;
+}
+
+.details img {
+    filter: invert();
+    height: 2rem;
+    width: 2rem;
+}
+
+.socialHandles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.socialHandleWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialHandles img {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 12px;
+    background: transparent;
+}
+
+
+@media screen and (max-width: 769px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        margin: 0;
+        width: 100vw;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    main {
+        margin: 0;
+        width: 100%;
+    }
+
+    navbar {
+        display: flex;
+        align-items: end;
+    }
+
+    navbar ul {
+        display: none;
+    }
+
+    .logoNav {
+        display: block;
+    }
+
+    #navbarMenu {
+        display: none;
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    #dropdown-menu {
+        right: 0;
+        width: 40%;
+    }
+
+    .firstBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 30rem;
+        padding: 1rem 2rem;
+    }
+
+    .firstBlockLeft {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        height: 8rem;
+        order: 1;
+    }
+
+    .firstBlockRight {
+        width: 100%;
+        margin: 0;
+        height: 8rem;
+        background-color: white;
+    }
+
+    .secondBlock {
+        display: block;
+        width: 100%;
+        max-height: 36rem;
+        padding: 1rem 2rem;
+    }
+
+    .secondBlockLeft {
+        width: 100%;
+        margin: 0;
+        height: 8rem;
+        background-color: white;
+    }
+
+    .secondBlockRight {
+        width: 100%;
+        margin: 0;
+        height: 8rem;
+        margin-top: 1rem;
+    }
+
+    .secondBlock button {
+        display: none;
+    }
+
+    .thirdBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 30rem;
+        padding: 1rem 2rem;
+    }
+
+    .thirdBlockLeft {
+        width: 100%;
+        margin: 0;
+        height: 8rem;
+        order: 1;
+        margin-top: 1rem;
+    }
+
+    .thirdBlockRight {
+        width: 100%;
+        margin: 0;
+        height: 8rem;
+        background-color: white;
+    }
+
+    .about {
+        min-height: 36rem;
+        max-height: 40rem;
+    }
+
+    .aboutWrap {
+        max-height: 35rem;
+        max-width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutText {
+        margin: 0;
+        margin-top: 1rem;
+        padding: 1rem;
+        max-height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutImage {
+        max-height: 100%;
+        min-height: 15rem;
+        min-width: 100%;
+        order: -1;
+        margin-top: 1rem;
+        border-radius: 0;
+    }
+
+    .aboutImage p {
+        display: none;
+    }
+
+    .companyText {
+        margin: 0;
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .testimonials {
+        max-height: 25rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonialsBanner {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 5px groove #444;
+        height: 3rem;
+        background-color: #020107;
+    }
+
+    .testimonialsContent {
+        width: 100%;
+        max-height: 15rem;
+        background-color: #020107;
+        border: 0;
+        top: 8rem;
+    }
+
+    .testimonialsContent a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .testimonialsCard {
+        width: 80%;
+        height: 100%;
+        background-color: #212122;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #020107;
+    }
+
+    .logo {
+        display: inline-flex;
+        max-height: 5rem;
+        font-size: 4rem;
+    }
+
+    .logo p {
+        color: white;
+    }
+
+    .details {
+        height: 20rem;
+        width: 60%;
+    }
+
+    .details span {
+        padding: 0.8rem;
+    }
+
+    .logo img {
+        width: 8rem;
+        height: 7rem;
+    }
+
+    .socialHandles {
+        display: flex;
+        width: 100%;
+        max-height: 5rem;
+        margin: 1rem 0;
+    }
+
+    .socialHandles>* {
+        padding: 0.5rem;
+    }
+
+    .socialHandleWrap {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .socialHandleWrap>a {
+        display: inline;
+    }
+}
