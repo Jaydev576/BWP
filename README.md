@@ -1,6 +1,6 @@
 ## **WebTree**
 
-A simple web application built with Express.js.
+A simple web application built with Express.js
 
 ### **Installation**
 
