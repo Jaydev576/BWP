@@ -1,10 +1,19 @@
 const express = require('express')
 const path = require('path')
+const bodyParser = require('body-parser')
+
 const app = express()
+
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(bodyParser.json())
+app.set('view engine', 'ejs')
+
 const port = 3000
 
-
+app.get('/theme1', (req, res) => {
+    res.render('theme1', { title: 'Habibi' })
+})
+// Pages
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/pages/home/index.html',)
 })
@@ -17,19 +26,19 @@ app.get('/login', (req, res) => {
 app.get('/form', (req, res) => {
     res.sendFile(__dirname + '/public/pages/form/index.html',)
 })
-app.get('/nav', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/navbar/index.html',)
+app.get('/preview', (req, res) => {
+    res.sendFile(__dirname + '/public/pages/preview/index.html',)
 })
 
-app.get('/theme/theme1', (req, res) => {
-    res.sendFile(__dirname + '/public/themes/theme_1/index.html',)
+// APIs
+app.post('/login', (req, res) => {
+    let body = req.body;
+    res.json(body)
 })
-
-
-// apis
-app.get('/api/login', (req, res) => {
-    console.log('Hey');
-    res.redirect('/login')
+app.post('/form', (req, res) => {
+    let body = req.body;
+    console.log(body);
+    res.json(body)
 })
 
 app.listen(port, () => {

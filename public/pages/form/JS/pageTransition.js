@@ -79,29 +79,3 @@ const checkFields = (currentPage) => {
     })
     return check;
 }
-
-
-
-const uploadImage = async (e) => {
-    let image = e.target.files[0];
-    let canvas = e.target.previousElementSibling;
-    let labelcanvas = e.target.parentElement;
-    canvas.style.opacity = "0";
-    let imageUrl = URL.createObjectURL(image)
-    labelcanvas.style.backgroundImage = `url(${imageUrl})`;
-    labelcanvas.style.border = "2px solid black";
-
-    Images.push(
-        {
-            'from': e.target.id,
-            'value': 1
-        }
-    )
-
-    console.log(Images);
-
-}
-
-inputBox.forEach(item => {
-    item.addEventListener('change', uploadImage)
-})
