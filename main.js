@@ -6,13 +6,19 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+app.set('views', './public/views')
 
 const port = 3000
 
 app.get('/theme1', (req, res) => {
-    res.render('theme1', { title: 'Habibi' })
+    let data = {
+        title: 'Habibi',
+        age: '45'
+    }
+    res.render('theme1', data)
 })
+
 // Pages
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/pages/home/index.html',)
