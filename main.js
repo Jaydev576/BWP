@@ -14,27 +14,35 @@ const port = 3000
 app.get('/theme1', (req, res) => {
     let data = {
         title: 'Habibi',
-        age: '45'
+        age: '45',
+        max: '4'
     }
     res.render('theme1', data)
 })
 
 // Pages
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/home/index.html',)
+    res.sendFile(__dirname + '/public/pages/home/index.html')
 })
 app.get('/templates', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/templates/index.html',)
+    res.sendFile(__dirname + '/public/pages/templates/index.html')
 })
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/login/index.html',)
+    res.sendFile(__dirname + '/public/pages/login/index.html')
 })
 app.get('/form', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/form/index.html',)
+    res.sendFile(__dirname + '/public/pages/form/index.html')
 })
-app.get('/preview', (req, res) => {
-    res.sendFile(__dirname + '/public/pages/preview/index.html',)
+// tmp
+app.get('/x', (req, res) => {
+    res.sendFile(__dirname + '/public/pages/form/radio.html')
 })
+
+// For themes
+app.get('/preview/theme1', (req, res) => {
+    res.sendFile(__dirname + '/public/themes/theme_1/index.html')
+})
+
 
 // APIs
 app.post('/login', (req, res) => {

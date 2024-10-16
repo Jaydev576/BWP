@@ -11,6 +11,16 @@ ul {
     list-style: none;
 }
 
+.themeChoose {
+    height: 18vh;
+}
+
+.themeChoose p {
+    font-size: 1.3rem;
+    font-weight: 550;
+    margin-bottom: 1rem;
+}
+
 .form_details>h2 {
     position: relative;
     margin-bottom: 2rem;
