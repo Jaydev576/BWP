@@ -18,7 +18,7 @@
 }
 
 .title {
-    margin: 1rem;
+    margin-bottom: 2rem;
     font-size: 5vh;
     color: #000;
     word-spacing: 1.2vw;
@@ -35,9 +35,10 @@
 }
 
 .cardbox {
+    display: flex;
     position: relative;
-    display: grid;
-    place-items: center;
+    margin-right: 10rem;
+    margin-bottom: 3rem;
 }
 
 .card {
@@ -58,9 +59,8 @@
     font-weight: bolder;
     color: black;
     border: 1px solid black;
-    margin-top: 3rem;
-    margin-inline: 2rem;
     position: relative;
+    z-index: 2;
 }
 
 .card:hover {
@@ -74,20 +74,16 @@
 
 .previewBtn {
     background-color: #44f114;
-    width: 85px;
-    height: 35px;
     border: 2px solid black;
-    border-radius: 10px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 7px;
+    font-size: 1.05rem;
+    font-weight: 700;
     position: absolute;
-    z-index: -1;
-    right: -7px;
-    bottom: 0;
+    z-index: 1;
+    bottom: 10px;
+    right: -115px;
     cursor: pointer;
 }
 
-.previewBtn img {
-    width: 35px;
-    height: 35px;
-    margin-left: 40px;
-    cursor: pointer;
-}
+.previewBtn:hover {}
