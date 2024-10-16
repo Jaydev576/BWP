@@ -73,6 +73,18 @@
     </section>
     <!-- Body -->
     <script src="/pages/templates/previewTheme.js"></script>
+    <script>
+        let logoutBtn = document.querySelector('.login-btn')
+        logoutBtn.addEventListener('click', async () => {
+            await fetch('/logout', {
+                method: 'POST',
+                body: '',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

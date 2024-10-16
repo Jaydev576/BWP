@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preview Page</title>
-    <link rel="stylesheet" href="/pages/preview/style.css">
+    <link rel="stylesheet" href="/views/preview/style.css">
     <link rel="stylesheet" href="/pages/CSS/mainstyle.css">
     <link rel="stylesheet" href="/pages/CSS/navbar.css">
 </head>
@@ -37,11 +37,12 @@
     <!-- Navbar -->
     <main>
         <div class="linkPreview">
-            <span id="businessName">Dear Buisness_Name ,</span>
+            <span id="businessName">Dear <%= Name_of_Business %> ,</span>
             <div class="linkPreviewInner">
                 <h1>Your Domain is Here</h1>
                 <div class="linkText">
-                    <a href="#">https://localhost:3000/user/670f85e306bada2a4006327d</a>
+                    <p>localhost:3000/user/<%= id %>
+                    </p>
                     <button class="copy">
                         <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
                         <span>
@@ -69,9 +70,23 @@
             </div>
         </div>
         <div class="pagePreview">
-            <!-- <iframe src="/views/theme1.ejs" frameborder="0"></iframe> -->
         </div>
     </main>
+    <script>
+        let logoutBtn = document.querySelector('.login-btn')
+        logoutBtn.addEventListener('click', async () => {
+            await fetch('/logout', {
+                method: 'POST',
+                body: '',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+        })
+    </script>
+    <script>
+        // script for copy text to keyboard
+    </script>
 </body>
 
 </html>
