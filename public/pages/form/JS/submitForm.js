@@ -47,7 +47,7 @@ form.addEventListener('submit', async (e) => {
             }
         });
         let resjson = await res.json();
-        console.log(resjson);
+        window.location.href = resjson.redirectUrl;
     }, 1000);
     e.target.reset()
 })
