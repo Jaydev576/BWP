@@ -52,7 +52,6 @@ app.get('/form', (req, res) => {
     else
         res.sendFile(__dirname + '/public/pages/login/index.html')
 })
-
 app.get('/user/:id', async (req, res) => {
     try {
         // let x = 5
@@ -69,7 +68,10 @@ app.get('/user/:id', async (req, res) => {
     //     res.json({ 'id': req.params.id, 'status': 'ERROR' })
     // }
 })
-
+app.get('/:slug', (req, res) => {
+    let slug = req.params.slug;
+    res.render('notFound/error', { slug })
+})
 
 
 // For previewing themes
