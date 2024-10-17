@@ -11,10 +11,18 @@ const uploadImageOnCanvas = e => {
     labelcanvas.style.border = "2px solid black";
 }
 const uploadImage = async (e) => {
-    // upload on cloudnary
+    //Uploading into Cloudinary
     let image = e.files[0];
-    let imageUrl = URL.createObjectURL(image)
-    return `www.cloudnary/${imageUrl}`
+    const imageData = new FormData();
+    imageData.append("file", image);
+    imageData.append("upload_preset", 'webtree');
+
+    const res = await fetch('https://api.cloudinary.com/v1_1/doeuywzyb/image/upload', {
+        method: 'POST',
+        body: imageData
+    });
+    const imageurl = await res.json();
+    return imageurl.url;
 }
 inputBox.forEach(item => {
     item.addEventListener('change', uploadImageOnCanvas)
@@ -30,8 +38,8 @@ form.addEventListener('submit', async (e) => {
                 formData['theme'] = e.target[i].value;
         }
         else if (i == 4 || i == 5 || i == 13 || i == 15 || i == 17) {
-            formData[e.target[i].id] = 'https://res.cloudinary.com/doeuywzyb/image/upload/v1726820480/pxiui0j4h8uq5yu285vq.jpg';
-            // formData[e.target[i].id] = await uploadImage(e.target[i]);
+            let url = await uploadImage(e.target[i]);
+            formData[e.target[i].id] = url;
         }
         else
             formData[e.target[i].id] = e.target[i].value;
@@ -47,7 +55,8 @@ form.addEventListener('submit', async (e) => {
             }
         });
         let resjson = await res.json();
-        window.location.href = resjson.redirectUrl;
-    }, 1000);
+        console.log(resjson);
+        // window.location.href = resjson.redirectUrl;
+    }, 100);
     e.target.reset()
 })

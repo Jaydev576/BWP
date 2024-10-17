@@ -100,9 +100,9 @@ app.post('/form', (req, res) => {
     try {
         // const newData = new myModel(body)
         // newData.save();
+        // console.log('Document has been submitted successfully');
         formSubmitted = true
         res.send({ 'redirectUrl': '/preview' })
-        // res.json({ 'message': 'SUCCESS' })
     } catch (error) {
         res.send({ 'redirectUrl': '/form' })
     }
