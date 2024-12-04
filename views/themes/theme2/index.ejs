@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= Name_of_Business %> - <%= Tagline %>
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Rashi+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/themes/theme2/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <img src=<%=logo %> alt="Car Wash Logo">
+        <ul class="links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href=<%=calendlyLink %>>Book A Call</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="head">
+            <p>
+                <%= Name_of_Business %>
+            </p>
+        </div>
+        <div class="mpara">
+            <%= Tagline %>
+        </div>
+        <div class="mimg">
+            <img src=<%=mainImage %> alt="Professional Car Wash Service">
+        </div>
+        <div class="info">
+            Why Us?
+        </div>
+        <section class="first" id="features">
+            <div>
+                <div class="fhead">Premium Products</div>
+                <span class="fp">
+                    <%= betterQuality %>
+                </span>
+            </div>
+            <div class="p1img">
+                <img src=<%=betterQualityImage %> alt="Premium Products">
+            </div>
+        </section>
+        <section class="second">
+            <div class="p2img">
+                <img src=<%=customerSupportImage %> alt="Dedicated Customer Support">
+            </div>
+            <div>
+                <div class="shead">Exceptional Service</div>
+                <span class="sp">
+                    <%= customerSupport %>
+                </span>
+                <div class="book">
+                    <button><a href=<%=calendlyLink%>>Book A Call</a></button>
+                </div>
+            </div>
+        </section>
+        <section class="first" id="features">
+            <div>
+                <div class="fhead">Experience</div>
+                <span class="fp">
+                    <%= experience %>
+                </span>
+            </div>
+            <div class="p1img">
+                <img src=<%=experienceImage %>>
+            </div>
+        </section>
+        <div class="about" id="aboutUs">About Us</div>
+        <div class="smimg">
+            <p class="paraa">
+                Welcome to <strong>
+                    <%= Name_of_Business %>
+                </strong>, your trusted destination for top-notch car wash services in <strong>
+                    <%= city %>
+                </strong>. Since <%= establishedYear %>, we've been dedicated to providing exceptional care for your
+                    vehicle.
+                    <br><br>
+                    Our mission is simple: to deliver high-quality car care with a personal touch, ensuring that every
+                    vehicle leaves our facility shining like new.
+            </p>
+            <img src=<%=mainImage %> alt="Car Wash Facility">
+        </div>
+        <div class="rechead">
+            <div class="he">TESTIMONIALS</div>
+        </div>
+        <div class="box">
+            <div class="boxT">
+                <strong>
+                    <%= Name1 %>
+                </strong>
+                <p>
+                    <%= testimonial1 %>
+                </p>
+            </div>
+            <div class="boxT">
+                <strong>
+                    <%= Name2 %>
+                </strong>
+                <p>
+                    <%= testimonial2 %>
+                </p>
+            </div>
+            <div class="boxT">
+                <strong>
+                    <%= Name3 %>
+                </strong>
+                <p>
+                    <%= testimonial3 %>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="foo">
+        <img src=<%=logo %> alt="Car Wash Logo">
+        <div class="mid" id="contact">
+            <p>Address</p>
+            <p>
+                <%= address %>
+            </p>
+            <p>Phone</p>
+            <p>
+                <%= phone %>
+            </p>
+            <p>Email</p>
+            <p>
+                <%= businessEmail %>
+            </p>
+            <p>
+            <p>BOOK A CALL</p>
+            <a href=<%=calendlyLink%>><img
+                    src="https://cdn3.iconfinder.com/data/icons/business-913/24/copyright-512.png" alt="Book A Call"
+                    id="c_icon"></a>
+            </p>
+        </div>
+        <div class="last">
+            <span>Social Handles</span>
+            <ul>
+                <a href=<%=instagramLink %>><img src='/themes/Assets/instagram.svg' alt="Instagram"></a>
+                <a href=<%=facebookLink %>><img src='/themes/Assets/facebook.svg' alt="Facebook"></a>
+                <a href=<%=yelpLink %>><img src='/themes/Assets/yelp.svg' alt="Yelp"></a>
+                <a href=<%=tiktokLink %>><img src='/themes/Assets/tiktok.svg' alt="TikTok"></a>
+                <a href=<%=xLink %>><img src='/themes/Assets/x.svg' alt="X"></a>
+                <a href=<%=linkedinLink %>><img src='/themes/Assets/linkedin.svg' alt="LinkedIn"></a>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

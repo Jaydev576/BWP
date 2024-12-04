@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href=<%=logo %> type="image/x-icon">
+    <title>
+        <%= Name_of_Business %> - <%= Tagline %>
+    </title>
+
+    <link rel="stylesheet" href="/themes/theme3/style.css">
+</head>
+
+<body>
+    <main>
+        <navbar>
+            <ul id="navbarMenu">
+                <li id="logoNav"><a id="navlink" href="#home"><img src=<%=logo %> alt="Fresh Bites Cafe Logo"></a></li>
+                <li><a id="navlink" href="#aboutUs">About Us</a></li>
+                <li><a id="navlink" href="#features">Features</a></li>
+                <li><a id="navlink" href="#contant">Contact</a></li>
+                <li><a id="navlink" href="#testimonial">Testimonials</a></li>
+                <li><a href=<%=calendlyLink %>>Book a call</a></li>
+            </ul>
+        </navbar>
+        <div class="nameAndTaglineInner" id="home">
+            <h1>
+                <%= Name_of_Business %>
+            </h1>
+            <h5>
+                <%= Tagline %>
+            </h5>
+        </div>
+        <div class="nameAndTagline">
+            <img src=<%=mainImage %>
+            alt="Inner view of Café">
+        </div>
+        <div class="blocks" id="features">
+            <h1>Why Us?</h1>
+            <div class="firstBlock">
+                <div class="firstBlockLeft">
+                    <img src=<%=betterQualityImage %> alt="Locally Sourced Ingredients">
+                </div>
+                <div class="firstBlockRight">
+                    <h2>Better Quality</h2>
+                    <p>
+                        <%= betterQuality %>
+                    </p>
+                </div>
+            </div>
+            <div class="secondBlock">
+                <div class="secondBlockLeft">
+                    <h2>Customer Support</h2>
+                    <p>
+                        <%= customerSupport %>
+                    </p>
+                </div>
+                <div class="secondBlockRight">
+                    <img src=<%=customerSupportImage %> alt="Friendly Customer Service">
+                </div>
+            </div>
+            <div class="thirdBlock">
+                <div class="thirdBlockLeft">
+                    <img src=<%=experienceImage %>
+                    alt="Expertly Trained Baristas">
+                </div>
+                <div class="thirdBlockRight">
+                    <h2>Experience</h2>
+                    <p>
+                        <%= experience %>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="aboutUs">
+            <h1>About us</h1>
+            <div class="aboutWrap">
+                <div class="aboutImage">
+                    <img
+                        src="https://img.freepik.com/premium-photo/modern-restaurant-with-large-glass-windows-wooden-facade-is-illuminated-night-with-lush_116547-123228.jpg">
+                </div>
+                <div class="aboutText">
+                    <p>
+                        Welcome to <strong>
+                            <%= Name_of_Business %>
+                        </strong>, your go-to destination for <strong>
+                            <%= product %>
+                        </strong> in <strong>
+                            <%= city %>.
+                        </strong>
+                    </p>
+                    <p>
+                        As a proud member of the local community, we've been dedicated to providing exceptional
+                        <strong>
+                            <%= product %>
+                        </strong> to our customers since <%= establishedYear %>. Our mission is
+                            simple: to deliver high-quality <strong>
+                                <%= product %>
+                            </strong> with a personal touch,
+                            ensuring that each of our customers feels valued and satisfied.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="companyText">
+            <p>
+                At <%= Name_of_Business %>, we believe in the power of community and strive to make a positive impact
+                    through our work.our team of skilled and passionate professionals is commited to excellence in
+                    everything we do, from <%= product %> to <%= additionalProduct %>. We take pride in our attention to
+                            detail and our ability to tailor our services to meet the unique needs of each customer.
+            </p>
+            <p>
+                Whether you're looking for <%= product %> or need assistance with <%= additionalProduct %>, you can
+                        count on us for reliable,friendly and expert service. We're not just here to meet your needs -
+                        we're here to exceed your expectations.
+            </p>
+            <p>
+                <strong>Thank you for choosing <%= Name_of_Business %>. We're excited to serve you and be a part of your
+                        journey!</strong>
+            </p>
+        </div>
+
+        <div class="testimonials" id="testimonial">
+            <h1>
+                Testimonials
+            </h1>
+            <div class="testimonialsCard">
+                <div class="tName">
+                    <%= Name1 %>
+                </div>
+                <div class="tReview">
+                    <%= testimonial1 %>
+                </div>
+            </div>
+            <div class="testimonialsCard">
+                <div class="tName">
+                    <%= Name2 %>
+                </div>
+                <div class="tReview">
+                    <%= testimonial2 %>
+                </div>
+            </div>
+            <div class="testimonialsCard">
+                <div class="tName">
+                    <%= Name3 %>
+                </div>
+                <div class="tReview">
+                    <%= testimonial3 %>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src=<%=logo %> alt="Business Logo">
+        </div>
+        <div class="details" id="contant">
+            <span>
+                <p>Address</p>
+                <p>
+                    <%= address %>
+                </p>
+            </span>
+            <span>
+                <p>Phone</p>
+                <p>
+                    <%= phone %>
+                </p>
+            </span>
+            <span>
+                <p>Email</p>
+                <p>
+                    <%= businessEmail %>
+                </p>
+            </span>
+            <span>
+                <p>BOOK A CALL</p>
+                <a href=<%=calendlyLink %>><img
+                        src="https://cdn3.iconfinder.com/data/icons/business-913/24/copyright-512.png"
+                        alt="Book A Call"></a>
+            </span>
+        </div>
+        <div class="socialHandles">
+            <p>Social Handles</p>
+            <div class="socialHandleWrap">
+                <a href=<%=instagramLink %>><img src='/themes/Assets/instagram.svg' alt="Instagram"></a>
+                <a href=<%=facebookLink %>><img src='/themes/Assets/facebook.svg' alt="Facebook"></a>
+                <a href=<%=yelpLink %>><img src='/themes/Assets/yelp.svg' alt="Yelp"></a>
+                <a href=<%=tiktokLink %>><img src='/themes/Assets/tiktok.svg' alt="Tiktok"></a>
+                <a href=<%=xLink %>><img src='/themes/Assets/x.svg' alt="X"></a>
+                <a href=<%=linkedinLink %>><img src='/themes/Assets/linkedin.svg' alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/themes/Js/scrolling.js"></script>
+</body>
+
+</html>

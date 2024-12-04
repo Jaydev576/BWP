@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/components/head')%>
+        <title>Error - WebTree</title>
+        <style>
+            .container {
+                width: 100vw;
+                height: 85vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            span {
+                display: flex;
+                gap: 1rem;
+                margin-top: 2rem;
+                margin-right: 20rem;
+                width: max-content;
+                height: max-content;
+            }
+
+            span h1:first-child {
+                text-decoration: underline;
+            }
+
+            .container img {
+                position: absolute;
+                top: 175px;
+                transform: rotateZ(13deg);
+            }
+        </style>
+</head>
+
+<body onload="blockloder()">
+    <%- include('../partials/components/loder')%>
+        <%- include('../partials/components/navbar')%>
+            <%- include('../partials/components/background')%>
+                <div class="container">
+                    <span>
+                        <h1>
+                            /<%= slug %>
+                        </h1>
+                        <h1>Not Found</h1>
+                    </span>
+                    <div>
+                        <img src="/notFound/pic.png" alt="">
+                    </div>
+                </div>
+                <%- include('../partials/scripts/loder')%>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/components/head')%>
+        <title>Log In - WebTree</title>
+        <link rel="stylesheet" href="/login/style.css">
+</head>
+
+<body onload="blockloder()">
+    <%- include('../partials/components/loder')%>
+        <%- include('../partials/components/navbar')%>
+            <%- include('../partials/components/background')%>
+                <!-- Body -->
+                <div class='login-container'>
+                    <form class="form">
+                        <div class="flex-column">
+                            <label>Email </label>
+                        </div>
+                        <div class="inputForm">
+                            <img src="/login/Assets/email.svg" alt="">
+                            <input type="text" class="logininput" placeholder="Enter your Email" id="email" />
+                        </div>
+                        <div class="flex-column">
+                            <label>Password </label>
+                        </div>
+                        <div class="inputForm">
+                            <img src="/login/Assets/password.svg" alt="">
+                            <input type="password" class="logininput" placeholder="Enter your Password" id="password" />
+                            <img src="/login/Assets/showpassword.svg" alt="" id="showpassword">
+                        </div>
+
+                        <span class="span forgotPassword">Forgot password?</span>
+                        <input type='submit' value='Log In' class='button-submit' />
+                        <div>
+                            <p class="p extraLoginInfo">Don't have an account?</p>
+                            <span class="span alternativeProcess">Sign Up</span>
+                        </div>
+                        <div>
+                            <p class="errortext">Password</p>
+                        </div>
+                    </form>
+                </div>
+                <!-- Body -->
+
+                <%- include('../partials/scripts/loder')%>
+                    <script src="/login/Js/login.js"></script>
+                    <script src="/login/Js/structure.js"></script>
+</body>
+
+</html>

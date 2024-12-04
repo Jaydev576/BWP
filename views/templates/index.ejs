@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/components/head')%>
+        <title>Templates - WebTree</title>
+        <link rel="stylesheet" href="/templates/style.css">
+</head>
+
+<body onload="blockloder()">
+    <%- include('../partials/components/loder')%>
+        <%- include('../partials/components/navbar')%>
+            <%- include('../partials/components/background')%>
+
+                <section class="hero-section">
+                    <div class="background-blur"></div>
+                    <div class="hero-content">
+                        <div class="title">CHOOSE A TEMPLATE</div>
+                        <div class="main-content">
+
+                            <a href="/preview/theme1">
+                                <div class="card" data-number="1" data-bg="preview1.jpg">
+                                    <div class="preview-text">PREVIEW</div>
+                                </div>
+                            </a>
+                            <a href="/preview/theme2">
+                                <div class="card" data-number="2" data-bg="preview2.jpg">
+                                    <div class="preview-text">PREVIEW</div>
+                                </div>
+                            </a>
+                            <a href="/preview/theme3">
+                                <div class="card" data-number="3" data-bg="preview3.jpg">
+                                    <div class="preview-text">PREVIEW</div>
+                                </div>
+                            </a>
+                            <a href="/preview/theme4">
+                                <div class="card" data-number="4" data-bg="preview4.jpg">
+                                    <div class="preview-text">PREVIEW</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/form">
+                                <button class="gotoform"> GO TO FORM</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <script src="./previewTheme.js"></script>
+                <%- include('../partials/scripts/loder')%>
+                    <%- include('../partials/scripts/logout')%>
+</body>
+
+</html>

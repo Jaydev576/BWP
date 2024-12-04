@@ -1,0 +1,96 @@
+    .logo {
+        cursor: pointer;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 75px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    header {
+        width: 100vw;
+        height: 15vh;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header>div {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar {
+        display: flex;
+        width: 100%;
+        gap: 5rem;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .logo:hover {
+        transform: scale(1.075);
+        transition: all 0.2s;
+    }
+
+    .login-btn {
+        position: absolute !important;
+        width: 80px !important;
+        right: 5%;
+    }
+
+    .nav-btn {
+        font-size: 0.95rem;
+        letter-spacing: 0.075rem;
+        cursor: pointer;
+    }
+
+    .button {
+        color: #222;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color;
+        font-weight: 700 !important;
+    }
+
+    .button:focus,
+    .button:hover {
+        color: #222;
+    }
+
+    .button:focus:after,
+    .button:hover:after {
+        width: 100%;
+        left: 0%;
+    }
+
+    .button:after {
+        background-color: black !important;
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        background-color: rgb(32, 32, 32);
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+    }

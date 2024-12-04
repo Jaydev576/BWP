@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.hero-content {
+    margin-top: 7.75rem;
+    flex: 1;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-content {
+    flex: 1;
+    max-width: 100%;
+    /* You can adjust this based on your preference */
+    height: 10%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    word-spacing: 1.8rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.cta-btn {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 15px 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    position: absolute;
+    margin-top: 2rem;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+}
+
+.cta-btn:hover {
+    background-color: #e63200;
+    color: white;
+    box-shadow: 0 15px 15px rgba(255, 255, 255, 0.1);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+}
+
+.cta-btn::after {
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+}
+
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: orangered;
+}
+
+.button {
+    /* font-size: 18px; */
+    color: #222;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.button:focus,
+.button:hover {
+    color: #222;
+}
+
+.button:focus:after,
+.button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-left: 10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 80%;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 25vw;
+    height: 80vh;
+    background-color: rgba(217, 217, 217, 0.8);
+    background-size: cover;
+    background-position: start;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    border: 2px solid white;
+    margin-inline: 1.5rem;
+    position: relative;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.card.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.card.next {
+    transform: scale(0.8);
+    opacity: 0.5;
+}
+
+.card.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.card[data-bg="preview1.jpg"] {
+    background-image: url('../templates/Assets/theme1.png');
+}
+
+.card[data-bg="preview2.jpg"] {
+    background-image: url('../templates/Assets/theme2.png');
+}
+
+.card[data-bg="preview3.jpg"] {
+    background-image: url('../templates/Assets/theme3.png');
+}
+
+.card[data-bg="preview4.jpg"] {
+    background-image: url('../templates/Assets/theme4.png');
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: top;
+    }
+
+    50% {
+        background-position: center;
+    }
+
+    100% {
+        background-position: bottom;
+    }
+}
+
+.carousel-container {
+    position: relative;
+    width: 150%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.card {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card.active {
+    z-index: 3;
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.card.next {
+    z-index: 2;
+    transform: translateX(20vw) scale(0.8);
+    opacity: 0.6;
+}
+
+.card.previous {
+    z-index: 2;
+    transform: translateX(-15vw) scale(0.8);
+    opacity: 0.6;
+}
+
+.card.hidden {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.scrollable-section {
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: rgb(167, 164, 164);
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 5;
+    margin-bottom: 3rem;
+}
+
+.scrollable-section h2,
+.scrollable-section h3 {
+    color: #222;
+    line-height: 50px;
+}
+
+.scrollable-section ul {
+    list-style-type: disc;
+    line-height: 35px;
+    padding-left: 20px;
+}
+
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}

@@ -1,0 +1,14 @@
+<script>
+    let logoutBtn = document.querySelector('.login-btn')
+    logoutBtn.addEventListener('click', async () => {
+        let res = await fetch('/logout', {
+            method: 'POST',
+            body: '',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        let resjson = await res.json()
+        window.location.href = resjson.redirectUrl
+    })
+</script>

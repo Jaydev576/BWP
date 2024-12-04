@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/components/head')%>
+        <title>WebTree - Unlock your potential with us</title>
+        <link rel="stylesheet" href="/home/style.css">
+</head>
+
+<body onload="blockloder()">
+    <%- include('../partials/components/loder')%>
+        <%- include('../partials/components/navbar')%>
+            <%- include('../partials/components/background')%>
+                <!-- Body -->
+                <section class="hero-section fade-in">
+                    <div class="hero-content">
+                        <h1><span class="white-text">SPREAD</span> <span class="black-text">REACH,</span></h1>
+                        <h1><span class="white-text">SPREAD</span> <span class="white-text">POTEN</span><span
+                                class="black-text">TIAL</span></h1>
+                        <p>Unlock your full potential with WebStore,</p>
+                        <p>Increase your sales by getting more consumers who need your services.</p>
+                        <div>
+                            <a href="/login">
+                                <button class="cta-btn">GET YOUR SITE</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Slider placed next to hero-content -->
+                    <div class="main-content">
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <a href="#">
+                                    <div class="card" data-bg="preview1.jpg"></div>
+                                </a>
+                                <a href="#">
+                                    <div class="card" data-bg="preview2.jpg"></div>
+                                </a>
+                                <a href="#">
+                                    <div class="card" data-bg="preview3.jpg"></div>
+                                </a>
+                                <a href="#">
+                                    <div class="card" data-bg="preview4.jpg"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Body -->
+                <%- include('../partials/scripts/loder')%>
+                    <script src="/home/Js/homepage.js"></script>
+</body>
+
+</html>

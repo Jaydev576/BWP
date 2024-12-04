@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/components/head')%>
+        <title>Form - WebTree</title>
+        <link rel="stylesheet" href="/form/CSS/style.css">
+        <link rel="stylesheet" href="/form/CSS/DragDrop.css">
+        <link rel="stylesheet" href="/form/CSS/Textfield.css">
+        <link rel="stylesheet" href="/form/CSS/ToolTips.css">
+        <link rel="stylesheet" href="/form/CSS/radioBox.css">
+</head>
+
+<body onload="blockloder()">
+    <%- include('../partials/components/loder')%>
+        <%- include('../partials/components/navbar')%>
+            <%- include('../partials/components/background')%>
+
+                <div class="main-container">
+                    <div class="container">
+                        <div class="left">
+                            <div class="business_name">
+                                <div class="logo">
+                                    <img src="/utilities/Assets/Logo.png" alt="">
+                                </div>
+                                <div class="wt_name">WebTree</div>
+                            </div>
+                            <div class="left_list">
+                                <ul>
+                                    <li>
+                                        <div class='list-circle'>
+                                            <div>1</div>
+                                            <div class='pipeline'>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <p>Business Details</p>
+                                    </li>
+                                    <li>
+                                        <div class='list-circle'>
+                                            <div>2</div>
+                                            <div class='pipeline'>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <p>About Business</p>
+                                    </li>
+                                    <li>
+                                        <div class='list-circle'>
+                                            <div>3</div>
+                                            <div class='pipeline'>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <p>Features</p>
+                                    </li>
+                                    <li>
+                                        <div class='list-circle'>
+                                            <div>4</div>
+                                            <div class='pipeline'>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                        <p>Testimonials</p>
+                                    </li>
+                                    <li>
+                                        <div class='list-circle'>
+                                            <div>5</div>
+                                        </div>
+                                        <p>Contact details</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="form_details">
+                                <!-- <h2>{formPages[currentPage].tagline}</h2> -->
+                                <h2></h2>
+                                <form class="form-content">
+                                    <%- include('./pages/business')%>
+                                        <%- include('./pages/about')%>
+                                            <%- include('./pages/features')%>
+                                                <%- include('./pages/testimonials')%>
+                                                    <%- include('./pages/contact')%>
+                                                        <div class="tooltip-container prev_btn">
+                                                            <span class="tooltip">Previous</span>
+                                                            <span class="text">
+                                                                <img src="/form/Assets/caret-left.svg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <div class="tooltip-container next_btn">
+                                                            <span class="tooltip">Next</span>
+                                                            <span class="text">
+                                                                <img src="/form/Assets/caret-right.svg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <input type="submit" value="Submit" class='submit' />
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <script src="/form/Js/script.js"></script>
+                <%- include('../partials/scripts/loder')%>
+                    <%- include('../partials/scripts/logout')%>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(55, 133, 107);
+}
+
+.nav {
+    margin: 2vw 2vw;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: rgb(32, 69, 57);
+    position: relative;
+}
+
+.na {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1.2rem;
+    background-color: rgb(32, 69, 57);
+
+}
+
+.na img {
+    background-color: rgb(32, 69, 57);
+    width: 100px;
+    height: 100px;
+}
+
+.na li {
+    color: white;
+    background-color: rgb(32, 69, 57);
+
+}
+
+.na a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: rgb(32, 69, 57);
+}
+
+.head {
+    margin: 5vw 0vw 0vw 7vw;
+    font-size: 4.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+
+.tagline {
+    margin: 0vw 0vw 5vw 0;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+    text-align: center;
+}
+
+.mimg {
+    margin: 0 10%;
+    height: 28rem;
+    width: 80%;
+    border: none;
+}
+
+.why {
+    margin: 4vw 10vw;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+}
+
+.img1 {
+    position: relative;
+    padding: 0vw 10vw;
+}
+
+.img2 {
+    position: relative;
+    padding: 0vw 10vw;
+
+}
+
+.img3 {
+    position: relative;
+    padding: 0vw 10vw;
+
+}
+
+.us img {
+    margin: 2vw 10vw;
+    border: none;
+    border-radius: 1.5rem;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+}
+
+.tex {
+    margin: 0vw 0vw;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    background-color: black;
+}
+
+.parag {
+    margin: 0vw 0vw;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: wheat;
+    position: absolute;
+    background-color: black;
+}
+
+.tex1 {
+    margin: 10vw 33%;
+}
+
+.tex2 {
+    margin: 10vw 28%;
+}
+
+.tex3 {
+    margin: 10vw 35%;
+}
+
+.parag1 {
+    margin: 15vw 20vw;
+}
+
+.parag2 {
+    margin: 15vw 20vw;
+}
+
+.parag3 {
+    margin: 15vw 20vw;
+}
+
+.us img {
+    height: 22rem;
+}
+
+.abo img {
+    margin: 3% 15%;
+    width: 70%;
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.about {
+    margin: 4vw 10vw;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 550;
+}
+
+.aboutText p {
+    width: 80%;
+    color: white;
+    align-self: center;
+    text-align: center;
+}
+
+.aboutText strong {
+    color: whitesmoke;
+}
+
+.companyText {
+    font-weight: 550;
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem;
+    text-align: center;
+}
+
+.companyText p {
+    color: white;
+    padding: 0.5rem;
+    width: 80%;
+    align-self: center;
+}
+
+.companyText :last-child {
+    color: white;
+    width: 60%;
+    margin-top: 1rem;
+    align-self: center;
+    text-align: center;
+}
+
+.name {
+    margin: -5vw 0vw 0vw 60vw;
+    padding: 0vw 0vw;
+    position: absolute;
+    background-color: beige;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+/* .thank{
+    margin: 1vw 20vw;
+    font-size: 1.5rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: white;
+    align-items: center;
+} */
+
+.tent {
+    margin: 4vw 10vw;
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: whitesmoke;
+}
+
+.t1 p {
+    margin: 2vw 20vw 2vw 0vw;
+    padding: 3vw 0vw 3vw 10vw;
+    background-color: beige;
+    border: none;
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    position: relative;
+}
+
+.t2 p {
+    margin: 2vw 20vw 2vw 0vw;
+    padding: 3vw 0vw 3vw 10vw;
+    background-color: beige;
+    border: none;
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    position: relative;
+}
+
+.t3 p {
+    margin: 2vw 20vw 2vw 0vw;
+    padding: 3vw 0vw 3vw 10vw;
+    background-color: beige;
+    border: none;
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    position: relative;
+}
+
+.t1 strong,
+.t2 strong,
+.t3 strong {
+    background-color: beige;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+
+.foo {
+    margin: 0;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    background-color: rgb(61, 61, 61);
+}
+
+.foo li {
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.logoo {
+    background-color: rgb(61, 61, 61);
+}
+
+.logoo img {
+    width: 8rem;
+    background-color: rgb(61, 61, 61);
+}
+
+.foo ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(61, 61, 61);
+}
+
+.fo1 {
+    padding: 1vw 0;
+    font-size: 1.7rem;
+}

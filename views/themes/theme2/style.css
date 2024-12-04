@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #dddddd;
+}
+
+#c_icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.5rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    align-items: center;
+    justify-content: space-between;
+    margin: 3vh 5vw;
+    display: flex;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 1000px;
+}
+
+.nav img {
+    margin: 0vh 3vw;
+    width: 10vw;
+    height: 10vh;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.links {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    list-style: none;
+    column-gap: 1vw;
+}
+
+.head {
+    font-size: calc(2rem + 2vw);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mpara {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: calc(1rem + 2vw);
+}
+
+.mimg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mimg img {
+    width: 90%;
+    height: 65vh;
+    border-radius: 1rem;
+    box-shadow: 50px soli;
+}
+
+.info {
+    margin: 20px 100px;
+    font-size: calc(2rem + 1vw);
+    text-decoration: underline solid 2px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Trebuchet MS';
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    color: black;
+    max-width: 70vw;
+    gap: 70px;
+    font-family: "Noto Rashi Hebrew", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.p1img img {
+    width: 30vw;
+    border-radius: 2rem;
+}
+
+.fhead {
+    font-size: calc(1.5rem + 1vw);
+    font-weight: 600;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: black;
+    max-width: 70vw;
+    gap: 70px;
+    font-family: "Noto Rashi Hebrew", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-bottom: 2rem;
+}
+
+.p2img img {
+    width: 30vw;
+    border-radius: 2rem;
+}
+
+.shead {
+    font-size: calc(1.5rem + 1vw);
+    font-weight: 600;
+}
+
+.second button {
+    background-color: rgb(23, 1, 77);
+    border-radius: 20px;
+    padding: 0.7rem 1.7rem;
+    margin: 2rem 0;
+    border: 3px solid transparent;
+    box-shadow: 8px 8px 20px 0px #45090059;
+    color: aliceblue;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.second button a {
+    color: white;
+    text-decoration: none;
+}
+
+.second button:hover {
+    background-color: rgb(12, 41, 137);
+    padding: 1rem 2rem;
+}
+
+.about {
+    margin: 20px 100px;
+    font-size: calc(2rem + 1vw);
+    text-decoration: underline solid 2px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Trebuchet MS';
+}
+
+.smimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.smimg img {
+    width: 70%;
+    height: 30rem;
+    margin-bottom: 2rem;
+    border-radius: 2.5rem;
+}
+
+.smimg p {
+    width: 80%;
+    margin: 2rem 0;
+    text-align: center;
+    font-family: "Noto Rashi Hebrew", serif;
+    font-weight: bold;
+}
+
+.rechead div {
+    margin: 0% 15%;
+}
+
+.he {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10vw 0vh;
+}
+
+.boxT {
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    height: 22rem;
+    border: 5px solid black;
+    border-radius: 2rem;
+    box-shadow: 10px 10px black;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.boxT p {
+    overflow: scroll;
+}
+
+.box {
+    display: flex;
+    padding: 2rem 10rem;
+    column-gap: 5rem;
+
+}
+
+.foo img {
+    width: 15rem;
+    height: 15rem;
+    margin-left: 2rem;
+}
+
+.foo {
+    color: white;
+    width: 100%;
+    min-height: 25rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(101, 101, 101);
+}
+
+.mid {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid :first-child {
+    font-size: 3rem;
+}
+
+.mid p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.last {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.last span {
+    font-size: 2.5rem;
+}
+
+.last ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.last a {
+    text-decoration: none;
+}
+
+.last img {
+    width: 2rem;
+    height: 2rem;
+}

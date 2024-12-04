@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(205, 201, 196);
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 0 20px;
+    padding-left: 80px;
+    padding-top: 1rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    margin-top: 2rem;
+    margin: 1rem;
+    font-size: 5vh;
+    color: #000;
+    font-family: sans-serif;
+    word-spacing: 1vw;
+    letter-spacing: 0.8vw;
+}
+
+.gotoform {
+    margin-top: 1rem;
+    font-size: 3vh;
+    color: white;
+    font-family: "Rajdhani", sans-serif;
+    word-spacing: 0.3vw;
+    letter-spacing: 0.1vw;
+    direction: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: #e63200;
+    border-radius: 1rem;
+    transition: all 0.5s;
+}
+
+.gotoform:hover {
+    transform: scale(1.1);
+    background-color: #c22c03;
+    color: #000;
+    cursor: pointer;
+}
+
+.gotoform:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 15vw;
+    height: 50vh;
+    background-color: rgba(217, 217, 217, 0.8);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+    border: 2px solid white;
+    margin-top: 2rem;
+    margin-inline: 2rem;
+    position: relative;
+    animation: backgroundMove 6s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.card[data-bg="preview1.jpg"] {
+    background-image: url('./Assets/theme1.png');
+}
+
+.card[data-bg="preview2.jpg"] {
+    background-image: url('./Assets/theme2.png');
+}
+
+.card[data-bg="preview3.jpg"] {
+    background-image: url('./Assets/theme3.png');
+}
+
+.card[data-bg="preview4.jpg"] {
+    background-image: url('./Assets/theme4.png');
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: top;
+    }
+
+    50% {
+        background-position: center;
+    }
+
+    100% {
+        background-position: bottom;
+    }
+}
+
+.card::before {
+    font-family: "Rajdhani", sans-serif;
+    content: attr(data-number);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.card .preview-text {
+    font-family: "Rajdhani", sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.card:hover .preview-text {
+    opacity: 1;
+}
+
+.card:hover {
+    border: 3px solid white;
+    transform: scale(1.1);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.button {
+    color: #222;
+    font-family: inherit;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.button:focus,
+.button:hover {
+    color: #222;
+    font-weight: 500;
+}
+
+.button:focus:after,
+.button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.scrollable-section {
+    max-height: 60vh;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    background-color: rgb(167, 164, 164);
+    /* Light background for contrast */
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Ensure it does not affect the absolute positioning of the hero section */
+    z-index: 5;
+    /* Make sure it's above other content */
+    margin-bottom: 3rem;
+}
+
+.scrollable-section h2,
+.scrollable-section h3 {
+    color: #222;
+    /* Adjust heading color */
+}
+
+.scrollable-section ul {
+    list-style-type: disc;
+    /* Bullet points for list */
+    padding-left: 20px;
+    /* Indent list */
+}
