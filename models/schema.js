@@ -10,7 +10,7 @@ let formSchema = new mongoose.Schema({
     betterQuality: String,
     betterQualityImage: String,
     businessEmail: String,
-    calendyLink: String,
+    calendlyLink: String,
     city: String,
     customerSupport: String,
     customerSupportImage: String,
